@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Blasting Off With Bootstrap</title>
-    <link href='stylesheets/style.css' rel='stylesheet'>
-    <link href='stylesheets/bootstrap.css' rel='stylesheet'>
-  </head>
-  <body>
+<head>
+  <title>Blasting Off With Bootstrap</title>
+  <link href='stylesheets/bootstrap.css' rel='stylesheet'>
+  <link href='stylesheets/style.css' rel='stylesheet'>
+</head>
+<body>
   <div class='container'>
     <div class='row'>
       <div class='col-md-12'>
@@ -16,7 +16,7 @@
     <div class='row'>
       <div class='col-md-6'>
         <h2>The Fastest Way to Space</h2>
-        <p>Make your way to space in the comfort of your own rocket, elevator or transporter.</p>
+        <p class='lead'>Make your way to space in the comfort of your own rocket, elevator or transporter.</p>
         <button type='button'>Take the Tour</button>
         <button type='button'>Book Tickets Now</button>
       </div>
@@ -25,23 +25,26 @@
       </div>
     </div>
 
-    <div class='row'>
+    <div class='row text-center features'>
       <div class='col-sm-4 col-xs-10 col-xs-offset-1 col-sm-offset-0'>
+        <i class="glyphicon glyphicon-briefcase"></i>
         <h3>Book Today!</h3>
         <p>Even if you're traveling tomorrow, you can still get tickets today. We have a number of conveniently located ports around the globe to service everyone.</p>
       </div>
 
       <div class='col-sm-4 col-xs-6'>
+        <i class="glyphicon glyphicon-random"></i>
         <h3>Go Anywhere</h3>
         <p>If you need to get to space today, why not try out a transporter? Despite the claims, there are have been no deaths in the last 6 weeks!</p>
       </div>
 
       <div class='col-sm-4 col-xs-6'>
+        <i class="glyphicon glyphicon-send"></i>
         <h3>RocketBus&reg;</h3>
         <p>For cheapest fares, catch the next RocketBus&reg; to the stars. Cheaper on your wallet, and easiest way to make friends.</p>
       </div>
-    </div>
-  </div>
+    </div><!-- features -->
+  </div><!-- container -->
 
   <div class='footer'>
     <div class='container'>
@@ -60,7 +63,14 @@
             <li><a href='stations.html'>Stations</a></li>
           </ul>
         </div>
-        <div class='visible-xs clearfix'></div>
+        <!-- 
+        This div only shows up on extra small devices and allows the "Stay in Touch" section to sit below the "Who We Are" section.
+
+        If we were going to fix this with CSS, we'd want to use something like clear:left on the "Stay in Touch" section to have it moved down below the "Who We Are" section. The only problem is that would apply the style for all device sizes.
+
+        Since we only want to adjust our layout in extra small mode, add the clearfix class to the div we added in the previous objective.
+        --> 
+        <div class='visible-xs clearfix'></div> 
         <div class='col-sm-2 col-xs-6'>
           <h4>Stay in Touch</h4>
           <ul>
@@ -81,9 +91,11 @@
           </ul>
           <p>Blasting Off With Bootstrap &copy;2214.</p>
         </div>
-    </div>
-  </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="javascripts/bootstrap.js"></script>
-  </body>
+      </div><!-- row -->
+    </div><!-- container -->
+  </div><!-- footer -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="javascripts/bootstrap.js"></script>
+</body>
 </html>
